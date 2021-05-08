@@ -71,7 +71,7 @@ The datastore sizes we used in our paper are listed as below:
 |---------|---------|--------|----------|
 | 3613350 | 6903320 | 524400 | 19070000 |
 
-#### Build Faiss Index
+### Build Faiss Index
 
 This script will build faiss index for keys, which is used for fast knn search. when the knn_index is build, you can
 remove keys.npy to save the hard disk space.
@@ -91,7 +91,7 @@ CUDA_VISIBLE_DEVICES=0 python $PROJECT_PATH/train_datastore_gpu.py \
   --dimension 1024
 ```
 
-#### Train Adaptive kNN-MT Model
+### Train Adaptive kNN-MT Model
 ```
 
 DSTORE_SIZE=3613350
@@ -143,7 +143,7 @@ done
 
 The batch size and update-freq should be adjust by yourself depends on your gpu.
 
-#### Inference with Adaptive kNN-MT
+### Inference with Adaptive kNN-MT
 
 ```
 DSTORE_SIZE=3613350
@@ -176,7 +176,7 @@ grep ^H "$OUTPUT_PATH"/generate.txt | cut -f3- > "$OUTPUT_PATH"/hyp
 grep ^D "$OUTPUT_PATH"/generate.txt | cut -f3- > "$OUTPUT_PATH"/hyp.detok
 ```
 
-#### NMT inference
+### base NMT inference
 
 We also provide scripts to do NMT and vanilla kNN-MT inference
 
@@ -202,7 +202,7 @@ grep ^H "$OUTPUT_PATH"/generate.txt | cut -f3- > "$OUTPUT_PATH"/hyp
 grep ^D "$OUTPUT_PATH"/generate.txt | cut -f3- > "$OUTPUT_PATH"/hyp.detok
 ```
 
-#### Vanilla kNN-MT
+### Vanilla kNN-MT inference
 
 ```
 DSTORE_SIZE=3613350

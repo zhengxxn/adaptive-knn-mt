@@ -8,7 +8,7 @@ comming soon
 ```
 
 This project implements our Adaptive kNN-MT as well as Vanilla kNN-MT.
-The implementation is heavily inspired by [knn-lm](https://github.com/urvashik/knnlm), many thanks to the authors for making their code avaliable.
+The implementation is build upon [fairseq](https://github.com/pytorch/fairseq), and heavily inspired by [knn-lm](https://github.com/urvashik/knnlm), many thanks to the authors for making their code avaliable.
 
 ## Requirements and Installation
 

@@ -120,7 +120,7 @@ do
   --tensorboard-logdir "$TRAINING_RECORD_PATH" \
   --save-dir "$MODEL_RECORD_PATH" --restore-file "$MODEL_PATH" \
   --reset-dataloader --reset-lr-scheduler --reset-meters --reset-optimizer \
-  --validate-interval-updates 100 --save-interval-updates 100 --keep-interval-updates 1 --max-update 4000 --validate-after-updates 2000 \
+  --validate-interval-updates 100 --save-interval-updates 100 --keep-interval-updates 1 --max-update 5000 --validate-after-updates 1000 \
   --save-interval 10000 --validate-interval 100 \
   --keep-best-checkpoints 1 --no-epoch-checkpoints --no-last-checkpoints --no-save-optimizer-state \
   --train-subset valid --valid-subset valid --source-lang de --target-lang en \
@@ -235,3 +235,12 @@ grep ^T "$OUTPUT_PATH"/generate.txt | cut -f2- > "$OUTPUT_PATH"/ref
 grep ^H "$OUTPUT_PATH"/generate.txt | cut -f3- > "$OUTPUT_PATH"/hyp
 grep ^D "$OUTPUT_PATH"/generate.txt | cut -f3- > "$OUTPUT_PATH"/hyp.detok
 ```
+
+We recommend you to use below hyper-parameters to replicate the good vanilla knn-mt results.
+And note that for our adaptive-knn-mt, we set the temperature as same as below.
+
+|             |  IT | Medical | Law | Koran |
+|:-----------:|:---:|:-------:|:---:|:-----:|
+|      k      |  8  |    4    |  4  |   16  |
+|    lambda   | 0.7 |   0.8   | 0.8 |  0.8  |
+| temperature |  10 |    10   |  10 |  100  |

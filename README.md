@@ -4,7 +4,11 @@ Code for our ACL 2021 paper "Adaptive Nearest Neighbor Machine Translation".
 Please cite our paper if you find this repository helpful in your research:
 
 ```
-comming soon
+@inproceedings{Zheng2021AdaptiveNN,
+  title={Adaptive Nearest Neighbor Machine Translation},
+  author={Xin Zheng and Zhirui Zhang and Junliang Guo and Shujian Huang and Boxing Chen and Weihua Luo and Jiajun Chen},
+  year={2021}
+}
 ```
 
 This project implements our Adaptive kNN-MT as well as Vanilla kNN-MT.
@@ -14,7 +18,7 @@ The implementation is build upon [fairseq](https://github.com/pytorch/fairseq), 
 
 * pytorch version >= 1.5.0
 * python version >= 3.6
-* faiss >= 1.6.5
+* faiss-gpu >= 1.6.5
 * pytorch_scatter = 2.0.5
 * 1.19.0 <= numpy < 1.20.0
 

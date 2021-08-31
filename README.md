@@ -4,10 +4,18 @@ Code for our ACL 2021 paper "Adaptive Nearest Neighbor Machine Translation".
 Please cite our paper if you find this repository helpful in your research:
 
 ```
-@inproceedings{Zheng2021AdaptiveNN,
-  title={Adaptive Nearest Neighbor Machine Translation},
-  author={Xin Zheng and Zhirui Zhang and Junliang Guo and Shujian Huang and Boxing Chen and Weihua Luo and Jiajun Chen},
-  year={2021}
+@inproceedings{zheng-etal-2021-adaptive,
+    title = "Adaptive Nearest Neighbor Machine Translation",
+    author = "Zheng, Xin  and Zhang, Zhirui  and Guo, Junliang  and Huang, Shujian  and Chen, Boxing  and Luo, Weihua  and Chen, Jiajun",
+    booktitle = "Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 2: Short Papers)",
+    month = aug,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.acl-short.47",
+    doi = "10.18653/v1/2021.acl-short.47",
+    pages = "368--374",
+    abstract = "kNN-MT, recently proposed by Khandelwal et al. (2020a), successfully combines pre-trained neural machine translation (NMT) model with token-level k-nearest-neighbor (kNN) retrieval to improve the translation accuracy. However, the traditional kNN algorithm used in kNN-MT simply retrieves a same number of nearest neighbors for each target token, which may cause prediction errors when the retrieved neighbors include noises. In this paper, we propose Adaptive kNN-MT to dynamically determine the number of k for each target token. We achieve this by introducing a light-weight Meta-k Network, which can be efficiently trained with only a few training samples. On four benchmark machine translation datasets, we demonstrate that the proposed method is able to effectively filter out the noises in retrieval results and significantly outperforms the vanilla kNN-MT model. Even more noteworthy is that the Meta-k Network learned on one domain could be directly applied to other domains and obtain consistent improvements, illustrating the generality of our method. Our implementation is open-sourced at https://github.com/zhengxxn/adaptive-knn-mt.",
 }
 ```
 

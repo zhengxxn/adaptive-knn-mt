@@ -22,6 +22,8 @@ Please cite our paper if you find this repository helpful in your research:
 This project implements our Adaptive kNN-MT as well as Vanilla kNN-MT.
 The implementation is build upon [fairseq](https://github.com/pytorch/fairseq), and heavily inspired by [knn-lm](https://github.com/urvashik/knnlm), many thanks to the authors for making their code avaliable.
 
+The [NJUNLP/knn-box](https://github.com/NJUNLP/knn-box) toolkit also implements Adaptive kNN-MT and other kNN models. We highly recommend to use NJUNLP/knn-box instead of this repo in the future, it can be more clear and easy to use, and can do some visualization.
+
 ## Requirements and Installation
 
 * pytorch version >= 1.5.0

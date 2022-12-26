@@ -37,6 +37,9 @@ You can install this project by
 pip install --editable ./
 ```
 
+## Attention！
+**2022/12/26** In our earlier implementations (before [commit 7997d11](https://github.com/zhengxxn/adaptive-knn-mt/commit/7997d11907eb03b37e22cf9e6342f0085f9eef06)), kNN-MT / adaptive kNN-MT were much slower than NMT for implementation-specific reasons. We repaired this problem and now kNN-MT / adaptive kNN-MT are only a little slower than NMT. To get high inference speed, if your code version is older than [commit 7997d11](https://github.com/zhengxxn/adaptive-knn-mt/commit/7997d11907eb03b37e22cf9e6342f0085f9eef06), please pull the latest code, or refer to [Pull Request #9](https://github.com/zhengxxn/adaptive-knn-mt/pull/9) to modify your code.
+
 ## Instructions
 
 We use an example to show how to use our codes.

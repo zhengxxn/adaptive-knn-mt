@@ -320,7 +320,7 @@ class KNN_Dstore(object):
         weight_sum_knn_weight = torch.matmul(knn_select_prob.unsqueeze(-2), knn_weight).squeeze(-2).unsqueeze(-1)  # [B, S, K, 1]
         # print('calculate multiple k prob sum, took {} s'.format(time.time() - start))
 
-        knn_tgt_prob = torch.zeros(B, S, K, self.vocab_size).to(queries.device)  # [B, S, K, Vocab Size]
+        knn_tgt_prob = torch.zeros(B, S, K, self.vocab_size, device=queries.device)  # [B, S, K, Vocab Size]
         tgt_index = tgt_index.unsqueeze_(-1)  # [B, S, K, 1]
 
         # start = time.time()
@@ -366,7 +366,7 @@ class KNN_Dstore(object):
         knn_weight = torch.softmax(scaled_dists, dim=-1).unsqueeze(-1)  # [B, S, K, 1]
 
         # set the target index for each neighbor
-        knn_tgt_prob = torch.zeros(bsz, seq_len, self.k, self.vocab_size).to(queries.device)  # [B, S, K, Vocab Size]
+        knn_tgt_prob = torch.zeros(bsz, seq_len, self.k, self.vocab_size, device=queries.device)  # [B, S, K, Vocab Size]
         tgt_index = tgt_index.unsqueeze_(-1)  # [B, S, K, 1]
 
         # implemented with pytorch_scatter
